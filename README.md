@@ -1,16 +1,16 @@
 EasyCurl Sınıfı - easyCurl Class PHP 
 ====================
 
-easyCurl sınıfı sayesinde basit curl işlemleriniz çok az kod bilgisi ile yapa bilirsiniz.
+easyCurl sınıfı sayesinde basit curl işlemleriniz çok az kod bilgisi ile yapabilirsiniz.
 
-Alttaki örnek ile bir siteye proxy ile bağlanma veri çekme ve bir sitedeki veriyi post etme gibi örneklere ulaşa bilirsiniz.
+Alttaki örnek ile bir siteye proxy ile bağlanma veri çekme ve bir sitedeki veriyi post etme gibi örneklere ulaşabilirsiniz.
 
 Geliştirilmesinde sizde katkı sağlar iseniz çok memnun oluruz.
 
 
 Not !!
 ---------------------
-Eğer sınıf ile beraber proxy kullanmak isterseniz kullanmak proxy adresini belirtirken proxyadresi:port şeklinde belirtiniz yani proxyadresi ikinokta ( : ) ardından ise port numarası.
+Eğer sınıf ile beraber proxy kullanmak isterseniz kullanmak istediğiniz proxy adresini belirtirken proxyadresi:port şeklinde belirtiniz. Yani proxyadresi ikinokta ( : ) ardından ise port numarası.
 
 Sınıfı dahil edip calıştıralım
 ---------------------
@@ -24,7 +24,7 @@ Bir adresten kaynak kodlarını almak
 ``` php
 	 /* 
 	 * Sayfa Kaynak kodlarını alma
-	 * SourceCode Fonksiyonuna adresi tanımlayarak kaynak kodlarını alıp değişkene aktara bilirsiniz veya ekrana yansıta bilirsiniz.
+	 * SourceCode Fonksiyonuna adresi tanımlayarak kaynak kodlarını alıp değişkene aktarabilirsiniz veya ekrana yansıtabilirsiniz.
 	 * Referans adresi vs.. düzenlemek için bu fonksiyondan önce referer gibi değişkenlere değer vermelisiniz.
 	 * Proxy kullanmak için 2. bir parametrede proxy adresini belirtmeniz yeterlidir. proxyip:sifre şeklinde göndermelisiniz
 	 */
@@ -40,7 +40,7 @@ Proxy Kullanılmış örnek
 
 Bir adresteki formu post ettirmek
 ---------------------
-birinci parametrede post edilecek sayfa yanı form un action kısmını veriniz 2. parametrede ise bir dizi gönderip burada name ve değerlerini belirtiniz alttaki örnekteki formda baslik ve mesaj alanları mevcuttu ona göre yapıldı eğer sizde misal username ve password alanları var ise ona göre ayarlamanız gerekmektedir.
+Birinci parametrede post edilecek sayfa yanı formun action kısmını veriniz 2. parametrede ise bir dizi gönderip burada name ve değerlerini belirtiniz. Alttaki örnekteki formda baslik ve mesaj alanları mevcuttu ona göre yapıldı. Eğer sizde misal username ve password alanları var ise ona göre ayarlamanız gerekmektedir.
 
 ``` php
 	/*
