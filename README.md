@@ -51,6 +51,50 @@ Bir adresteki formu post ettirmek
 
 ```
 
+Sınıf ile kullana bileceğiniz metodlar  
+====================
+
+Referans adresi belirtmek isterseniz
+---------------------
+``` php
+$easyCurl->referer="http://savascanaltun.com.tr";
+```
+
+Adres yönleniyor ve takip etmek istiyor iseniz
+---------------------
+``` php
+ $easyCurl->followlocation=true;
+```
+
+Header bilgisi gönderilsin istiyor iseniz
+---------------------
+``` php
+ $easyCurl->header=true;
+```
+
+Bir bağlantının maximum bekleme süresini ayarlamak ( default : 5 ) 
+---------------------
+``` php
+ $easyCurl->timeout=5;
+```
+
+Pekiya ssl ? 
+---------------------
+``` php
+ $easyCurl->ssl_verifypeer=true;
+ $easyCurl->ssl_verifyhost=true;
+
+```
+Çerezleri aktif etmek istiyor iseniz
+---------------------
+``` php
+ $easyCurl->cookie=true;
+```
+
+
+Author : [Savas Can ALTUN](http://savascanaltun.com.tr/)
+Mail : savascanaltun@gmail.com
+Web : http://savascanaltun.com.tr
 
 
 
