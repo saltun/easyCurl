@@ -34,6 +34,8 @@ Bir adresten kaynak kodlarını almak
 
 Bir adresteki formu post ettirmek
 ---------------------
+birinci parametrede post edilecek sayfa yanı form un action kısmını veriniz 2. parametrede ise bir dizi gönderip burada name ve değerlerini belirtiniz alttaki örnekteki formda baslik ve mesaj alanları mevcuttu ona göre yapıldı eğer sizde misal username ve password alanları var ise ona göre ayarlamanız gerekmektedir.
+
 ``` php
 	/*
 	* CURL POST İşlemi 
