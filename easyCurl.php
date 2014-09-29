@@ -57,35 +57,16 @@ cLass easyCurl{
 
   public function curlPost($url=NULL,$content=NULL,$proxy=NULL){
 
-    /* boşmu değil mi diye kontrol ettiriyoruz */
-   if (empty($url)) {
-      return "Hata : action Adresi boş";
-    }else if(empty($content)){
-      return "Hata : Post verileri yok";
-    }
-
-            $data=null;
-            if (isset($content) && is_array($content)) {
-              $count=count($content);
-              $keys=array_keys($content);
-              $values=array_values($content);
-                  for ($i=0; $i < $count; $i++) { 
-
-                      if ($i>0) {
-                        $data=$data.$keys[$i]."=".$values[$i];
-                      }else{
-                         
-                          $data=$data.$keys[$i]."=".$values[$i]."&";
-                      }
-
-                  }
-
-               
-          }
+        /* boşmu değil mi diye kontrol ettiriyoruz */
+        if (empty($url)) {
+            return "Hata : action Adresi boş";
+        } else if(empty($content)) {
+            return "Hata : Post verileri yok";
+        }
 
         $this->init($url, $proxy); 
         curl_setopt($this->curl, CURLOPT_POST, true);
-        curl_setopt($this->curl, CURLOPT_POSTFIELDS,$data);
+        curl_setopt($this->curl, CURLOPT_POSTFIELDS, http_build_query($content));
  
         $exec = curl_exec($this->curl);
         return $exec;
@@ -93,6 +74,3 @@ cLass easyCurl{
   }
 
 }
-
-
-?>
