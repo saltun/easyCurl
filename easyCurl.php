@@ -57,15 +57,15 @@ cLass easyCurl{
   public function curlPost($url=NULL,$content=NULL,$proxy=NULL){
 
     /* boşmu değil mi diye kontrol ettiriyoruz */
-   if (empty($url)) {
-      return "Hata : action Adresi boş";
-    }else if(empty($content)){
-      return "Hata : Post verileri yok";
-    }
-        $data= http_build_query($content);
+        if (empty($url)) {
+            return "Hata : action Adresi boş";
+        } else if(empty($content)) {
+            return "Hata : Post verileri yok";
+        }
+
         $this->init($url, $proxy); 
         curl_setopt($this->curl, CURLOPT_POST, true);
-        curl_setopt($this->curl, CURLOPT_POSTFIELDS,$data);
+        curl_setopt($this->curl, CURLOPT_POSTFIELDS, http_build_query($content));
  
         $exec = curl_exec($this->curl);
         return $exec;
