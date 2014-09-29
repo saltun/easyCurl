@@ -27,7 +27,6 @@ cLass easyCurl{
    }
 
   public function init($url,$proxy){
-
     $this->curl  = curl_init();
     curl_setopt($this->curl, CURLOPT_URL, $url);
     curl_setopt($this->curl, CURLOPT_USERAGENT, getenv('USER_AGENT'));
@@ -63,26 +62,7 @@ cLass easyCurl{
     }else if(empty($content)){
       return "Hata : Post verileri yok";
     }
-
-            $data=null;
-            if (isset($content) && is_array($content)) {
-              $count=count($content);
-              $keys=array_keys($content);
-              $values=array_values($content);
-                  for ($i=0; $i < $count; $i++) { 
-
-                      if ($i>0) {
-                        $data=$data.$keys[$i]."=".$values[$i];
-                      }else{
-                         
-                          $data=$data.$keys[$i]."=".$values[$i]."&";
-                      }
-
-                  }
-
-               
-          }
-
+        $data= http_build_query($content);
         $this->init($url, $proxy); 
         curl_setopt($this->curl, CURLOPT_POST, true);
         curl_setopt($this->curl, CURLOPT_POSTFIELDS,$data);
