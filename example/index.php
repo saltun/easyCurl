@@ -52,6 +52,21 @@ require_once "easyCurl.php";
 
 	echo $post;
 
+	/*
+	* Hatalara Ulaşmak
+	*  -> Hata Sayısına ulaşmak $class->errorNumber
+	*  -> Hataya ulaşmak $class->error
+	*/
+	echo "Error Number : ".$easyCurl->errorNumber;
+	echo "Error : ".$easyCurl->error;
+
+	/*
+	* CURL işleminin download hızını alma.
+	* $class->speed
+	*/
+	echo "<br/>";
+	echo "Speed : ".$easyCurl->speed;
+
 
 
 

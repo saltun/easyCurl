@@ -99,6 +99,25 @@ Pekiya ssl ?
  $easyCurl->cookie=true;
 ```
 
+Hatalara ulaşma
+---------------------
+Hata sayısına ulaşma ;
+``` php
+ $easyCurl->errorNumber;
+```
+Hataya ulaşma ;
+``` php
+ $easyCurl->error;
+```
+
+
+Hız bilgisini edinme
+---------------------
+``` php
+ $easyCurl->speed;
+```
+
+
 
 Author : [Savas Can ALTUN](http://savascanaltun.com.tr/)
 Mail : savascanaltun@gmail.com

@@ -5,7 +5,7 @@
 * Mail : savascanaltun@gmail.com
 * GİT : http://github.com/saltun
 * Date : 27.08.2014
-* Update : 29.08.2014
+* Update : 24.10.2014
 */
 
 cLass easyCurl{
@@ -18,8 +18,12 @@ cLass easyCurl{
   public $ssl_verifypeer=false;
   public $ssl_verifyhost=false;
   public $cookie=false;
+  public $error;
+  public $errorNumber;
+  public $speed="None";
   private $curl;
 
+  /* run class and curl  control - sınıf başlangıcı ve curl kontrolü */
   public function __construct(){
         if (!extension_loaded('curl')) {
           die('CURL extension not found!');
@@ -41,6 +45,10 @@ cLass easyCurl{
     }
     curl_setopt($this->curl, CURLOPT_BINARYTRANSFER, TRUE);
     curl_setopt($this->curl, CURLOPT_HEADER, $this->header);
+    $info=curl_getinfo($this->curl);
+    $this->speed=$info['speed_download'];
+    $this->errorNumber=curl_errno($this->curl);
+    $this->error=curl_error($this->curl);
 
 
        
@@ -56,7 +64,7 @@ cLass easyCurl{
 
   public function curlPost($url=NULL,$content=NULL,$proxy=NULL){
 
-    /* boşmu değil mi diye kontrol ettiriyoruz */
+      /* boşmu değil mi diye kontrol ettiriyoruz */
         if (empty($url)) {
             return "Hata : action Adresi boş";
         } else if(empty($content)) {
@@ -72,7 +80,10 @@ cLass easyCurl{
 
   }
 
+  /* finish class - sınıf sonu */
+  public function __destruct(){
+    curl_close($this->curl);
+  }
 }
-
 
 ?>
