@@ -5,22 +5,22 @@
 * Mail : savascanaltun@gmail.com
 * GİT : http://github.com/saltun
 * Date : 27.08.2014
-* Update : 24.10.2014
+* Update : 26.06.2016
 */
 
 cLass easyCurl{
 
 
-  public $referer="http://google.com";
-  public $followlocation=false;
-  public $header=false;
-  public $timeout=5;
-  public $ssl_verifypeer=false;
-  public $ssl_verifyhost=false;
-  public $cookie=false;
-  public $error;
-  public $errorNumber;
-  public $speed="None";
+  public  $referer="http://google.com";
+  public  $followlocation=false;
+  public  $header=false;
+  public  $timeout=5;
+  public  $ssl_verifypeer=false;
+  public  $ssl_verifyhost=false;
+  public  $cookie=false;
+  public  $error;
+  public  $errorNumber;
+  public  $speed="None";
   private $curl;
 
   /* run class and curl  control - sınıf başlangıcı ve curl kontrolü */
@@ -56,7 +56,7 @@ cLass easyCurl{
 
 
 
-  public function SourceCode($url,$proxy=NULL){
+  public function sourceCode($url,$proxy=NULL){
      $this->init($url, $proxy); 
          $exec = curl_exec($this->curl);
         return $exec;     

@@ -29,13 +29,13 @@ Bir adresten kaynak kodlarını almak
 	 * Proxy kullanmak için 2. bir parametrede proxy adresini belirtmeniz yeterlidir. proxyip:sifre şeklinde göndermelisiniz
 	 */
 
-	$source=$easyCurl->SourceCode('http://savascanaltun.com.tr');
+	$source=$easyCurl->sourceCode('http://savascanaltun.com.tr');
 ```
 
 Proxy Kullanılmış örnek
 ---------------------
 ``` php
-	$source=$easyCurl->SourceCode('http://savascanaltun.com.tr','122.323.32.22:8082');
+	$source=$easyCurl->sourceCode('http://savascanaltun.com.tr','122.323.32.22:8082');
 ```
 
 Bir adresteki formu post ettirmek

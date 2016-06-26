@@ -26,12 +26,12 @@ require_once "easyCurl.php";
 
 	 /* 
 	 * Sayfa Kaynak kodlarını alma
-	 * SourceCode Fonksiyonuna adresi tanımlayarak kaynak kodlarını alıp değişkene aktara bilirsiniz veya ekrana yansıta bilirsiniz.
+	 * sourceCode Fonksiyonuna adresi tanımlayarak kaynak kodlarını alıp değişkene aktara bilirsiniz veya ekrana yansıta bilirsiniz.
 	 * Referans adresi vs.. düzenlemek için bu fonksiyondan önce referer gibi değişkenlere değer vermelisiniz.
 	 * Proxy kullanmak için 2. bir parametrede proxy adresini belirtmeniz yeterlidir. proxyip:sifre şeklinde göndermelisiniz
 	 */
 
-	$source=$easyCurl->SourceCode('http://savascanaltun.com.tr');
+	$source=$easyCurl->sourceCode('http://savascanaltun.com.tr');
 	echo $source;
 
 
