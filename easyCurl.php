@@ -65,7 +65,7 @@ cLass easyCurl{
   private $curl;
 
   /**
-    Run Class and check curl extension. 
+  *  Run Class and check curl extension. 
   */
   public function __construct(){
         if (!extension_loaded('curl')) {
